@@ -46,7 +46,7 @@ When running on Azure resources (VMs, Container Apps, etc.), the server automati
 
 For more authentication options, see the [Azure Identity documentation](https://learn.microsoft.com/azure/developer/azure-mcp-server/).
 
-### 4. Install the Plugins
+### 4. Install the Plugins in Copilot CLI
 # Add the repo as a plugin marketplace
 /plugin marketplace add microsoft/azure-skills
 
