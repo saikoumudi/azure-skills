@@ -165,35 +165,13 @@ By default, the Azure MCP server connects to the Azure Public Cloud. If you use 
 
 ### Copilot CLI
 
-After installing the plugin, the skills are installed in `~/.copilot/installed-plugins/` on macOS/Linux (or `%USERPROFILE%\.copilot\installed-plugins\` on Windows). Edit the `<skill_installation_dir>/azure-skills/azure/.mcp.json` file in the installed plugin directory to add the `--cloud` argument:
+After installing the plugin, Azure MCP server should be configured for copilot as well. You can list the configured MCP servers by running `/mcp show`
 
-**Azure China Cloud:**
+![MCP Servers](assets/mcp_servers.png)
 
-```json
-{
-  "mcpServers": {
-    "azure": {
-      "command": "npx",
-      "args": ["-y", "@azure/mcp@latest", "server", "start", "--cloud", "AzureChinaCloud"]
-    }
-    // Keep the other MCP server configurations in this file as they are.
-  }
-}
-```
+Edit the Azure MCP server named `azure` from `plugin:azure` to add the `--cloud` argument. Execute `/mcp edit azure`. Navigate to the `Command` section to add the `--cloud` argument, use `AzureChinaCloud` to access Azure China Cloud, and use `AzureUSGovernment` to access Azure US Government Cloud.
 
-**Azure US Government:**
-
-```json
-{
-  "mcpServers": {
-    "azure": {
-      "command": "npx",
-      "args": ["-y", "@azure/mcp@latest", "server", "start", "--cloud", "AzureUSGovernment"]
-    }
-    // Keep the other MCP server configurations in this file as they are.
-  }
-}
-```
+![Edit MCP Server](assets/edit_mcp_server.png)
 
 Before starting the MCP server, ensure your local CLI tools are authenticated against the correct cloud:
 
