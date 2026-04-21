@@ -111,6 +111,12 @@ The Azure MCP extension will also install a companion extension that brings the 
 gemini extensions install https://github.com/microsoft/azure-skills
 ```
 
+### Cursor
+
+You can install the Azure plugin from the [Cursor Marketplace](https://cursor.com/marketplace/azure) or directly from Cursor settings by navigating to **Settings** > **Plugins** and searching for "Azure":
+
+![Cursor Plugins](assets/cursor-plugins.png)
+
 ### IntelliJ IDEA
 
 #### Prerequisites
